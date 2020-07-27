@@ -11,7 +11,6 @@ defmodule NekoCaffeWeb.AdoptionView do
   end
 
   def render("adoption.json", %{adoption: adoption}) do
-    %{id: adoption.id,
-      worker_name: adoption.worker_name}
+    %{id: adoption.id, worker_name: adoption.worker_name}
   end
 end

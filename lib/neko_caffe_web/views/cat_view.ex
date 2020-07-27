@@ -11,9 +11,6 @@ defmodule NekoCaffeWeb.CatView do
   end
 
   def render("cat.json", %{cat: cat}) do
-    %{id: cat.id,
-      name: cat.name,
-      age: cat.age,
-      breed: cat.breed}
+    %{id: cat.id, name: cat.name, age: cat.age, breed: cat.breed}
   end
 end

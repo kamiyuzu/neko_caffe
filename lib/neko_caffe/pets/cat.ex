@@ -1,11 +1,16 @@
 defmodule NekoCaffe.Pets.Cat do
+  @moduledoc false
   use Ecto.Schema
   import Ecto.Changeset
+
+  alias NekoCaffe.Clients.Owner
 
   schema "cats" do
     field :age, :integer
     field :breed, :string
     field :name, :string
+
+    belongs_to :owner, Owner
 
     timestamps()
   end

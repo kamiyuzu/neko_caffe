@@ -3,6 +3,7 @@ defmodule NekoCaffeWeb.OwnerController do
 
   alias NekoCaffe.Clients
   alias NekoCaffe.Clients.Owner
+  alias NekoCaffe.Pets
 
   action_fallback NekoCaffeWeb.FallbackController
 
@@ -12,6 +13,9 @@ defmodule NekoCaffeWeb.OwnerController do
   end
 
   def create(conn, %{"owner" => owner_params}) do
+    cat = Pets.get_cat!(owner_params["cat_id"])
+    owner_params = Map.put(owner_params, "cats", [cat])
+
     with {:ok, %Owner{} = owner} <- Clients.create_owner(owner_params) do
       conn
       |> put_status(:created)

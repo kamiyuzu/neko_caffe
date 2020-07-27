@@ -9,6 +9,5 @@ defmodule NekoCaffe.Repo.Migrations.CreateCats do
 
       timestamps()
     end
-
   end
 end

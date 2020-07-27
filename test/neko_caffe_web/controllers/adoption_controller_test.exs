@@ -50,7 +50,10 @@ defmodule NekoCaffeWeb.AdoptionControllerTest do
   describe "update adoption" do
     setup [:create_adoption]
 
-    test "renders adoption when data is valid", %{conn: conn, adoption: %Adoption{id: id} = adoption} do
+    test "renders adoption when data is valid", %{
+      conn: conn,
+      adoption: %Adoption{id: id} = adoption
+    } do
       conn = put(conn, Routes.adoption_path(conn, :update, adoption), adoption: @update_attrs)
       assert %{"id" => ^id} = json_response(conn, 200)["data"]
 

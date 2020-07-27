@@ -11,8 +11,6 @@ defmodule NekoCaffeWeb.OwnerView do
   end
 
   def render("owner.json", %{owner: owner}) do
-    %{id: owner.id,
-      name: owner.name,
-      email: owner.email}
+    %{id: owner.id, name: owner.name, email: owner.email}
   end
 end

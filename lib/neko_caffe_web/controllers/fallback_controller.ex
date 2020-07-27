@@ -21,4 +21,11 @@ defmodule NekoCaffeWeb.FallbackController do
     |> put_view(NekoCaffeWeb.ErrorView)
     |> render(:"404")
   end
+
+  def call(conn, {:error, http_code}) do
+    conn
+    |> put_status(http_code)
+    |> put_view(NekoCaffeWeb.ErrorView)
+    |> render(http_code)
+  end
 end
