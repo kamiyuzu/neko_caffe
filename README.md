@@ -39,6 +39,11 @@ Continue with the instructions [here](https://github.com/direnv/direnv#setup)
 
 ### Development environment database
 
+- Install docker&docker-compose
+
+Information to install docker can be found [here](https://docs.docker.com/get-docker/)
+Information to install docker-compose can be found [here](https://docs.docker.com/compose/install/)
+
 Set up postgresql database:
 
 ```bash
