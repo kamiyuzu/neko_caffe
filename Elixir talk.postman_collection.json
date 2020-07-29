@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "259b4a39-f66d-4f37-8faf-cb0946e89213",
+		"name": "Elixir talk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cats",
+			"item": [
+				{
+					"name": "Create cat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cat\": {\"name\": \"Lina\", \"age\": 6, \"breed\": \"Bosque de noruega\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/cats",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"cats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create cat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"cat\": {\"name\": \"Lina\", \"age\": 6, \"breed\": \"Bosque de noruega\"}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/cats",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"cats"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "content-length",
+									"value": "67"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "date",
+									"value": "Tue, 28 Jul 2020 16:02:03 GMT"
+								},
+								{
+									"key": "location",
+									"value": "/api/cats/1"
+								},
+								{
+									"key": "server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "x-request-id",
+									"value": "FiX2AEa76fCGiuEAAABD"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"age\": 6,\n        \"breed\": \"Bosque de noruega\",\n        \"id\": 1,\n        \"name\": \"Lina\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "clients",
+			"item": [
+				{
+					"name": "Add client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"owner\": {\"name\": \"Alberto Revuelta Arribas\", \"email\": \"email_falso@falso.com\", \"cat_id\": 1}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/owners",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"owners"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add client",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"owner\": {\"name\": \"Alberto Revuelta Arribas\", \"email\": \"email_falso@falso.com\", \"cat_id\": 1}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/owners",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"owners"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "content-length",
+									"value": "83"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "date",
+									"value": "Tue, 28 Jul 2020 16:02:24 GMT"
+								},
+								{
+									"key": "location",
+									"value": "/api/owners/1"
+								},
+								{
+									"key": "server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "x-request-id",
+									"value": "FiX2BSxDflgtf70AAAKk"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"email\": \"email_falso@falso.com\",\n        \"id\": 1,\n        \"name\": \"Alberto Revuelta Arribas\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "adoptions",
+			"item": [
+				{
+					"name": "Adopt cat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"adoption\": {\"worker_name\": \"Alberto Revuelta Arribas\", \"owner_id\": 1}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/adoptions",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"adoptions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Adopt cat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"adoption\": {\"worker_name\": \"Alberto Revuelta Arribas\", \"owner_id\": 1}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/adoptions",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"adoptions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "content-length",
+									"value": "58"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "date",
+									"value": "Tue, 28 Jul 2020 16:02:37 GMT"
+								},
+								{
+									"key": "location",
+									"value": "/api/adoptions/1"
+								},
+								{
+									"key": "server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "x-request-id",
+									"value": "FiX2CBEZYOBdOyEAAALE"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"worker_name\": \"Alberto Revuelta Arribas\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
